@@ -6,5 +6,6 @@ export default {
         nowPlayingMovies: {},
         popularMovies: {},
         searchResults: {},
+        isFetching: false
     }
 }

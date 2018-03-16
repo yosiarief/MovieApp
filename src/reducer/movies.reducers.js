@@ -2,13 +2,13 @@ import * as types from '../Utils/actionTypes';
 import initialState from '../reducer/initialState';
 
 export default function(state = initialState.movies, action){
-    console.log(state, 'fetch')
     switch (action.type){
         
         case types.RETRIEVE_POPULAR_MOVIES_SUCCESS:
             return {
                 ...state,
-                PopularMovies: action.type
+                popularMovies: action.payload,
+                isFetching: true
             };
 
         case types.RETRIEVE_NOWPLAYING_MOVIES_SUCCESS:
